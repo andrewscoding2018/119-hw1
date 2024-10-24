@@ -1,3 +1,5 @@
+import io
+
 """
 Part 1: Data Processing in Pandas
 
@@ -98,10 +100,12 @@ def load_input():
     # Fill out this part. You can use column access to get only the
     # columns we are interested in using the NEW_COLUMNS variable above.
     # Make sure you return the columns in the new order.
-    # TODO
+    df_2019 = df_2019[NEW_COLUMNS]
+    df_2020 = df_2020[NEW_COLUMNS]
+    df_2021 = df_2021[NEW_COLUMNS]
 
     # When you are done, remove the next line...
-    raise NotImplementedError
+    # raise NotImplementedError
 
     # ...and keep this line to return the dataframes.
     return [df_2019, df_2020, df_2021]
@@ -123,6 +127,7 @@ As your answer to q2, return True if all validation checks pass,
 and False otherwise.
 """
 
+
 def q2(dfs):
     """
     Input: Assume the input is provided by load_input()
@@ -140,7 +145,18 @@ def q2(dfs):
     # - the number of rows
     # - the number of columns
     # - the columns are listed in the correct order
-    raise NotImplementedError
+
+    # rows
+    NUM_ROWS = 100
+    for df in dfs:
+
+        if df.shape != (NUM_ROWS,len(NEW_COLUMNS)):
+            raise ValueError("wrong dimensions of dataframes")
+        if list(df.columns) != NEW_COLUMNS:
+            raise ValueError("columns not listed in the right order")
+    
+    return True
+    
 
 """
 ===== Interlude: Checking your output so far =====
@@ -181,7 +197,12 @@ def q3(dfs):
     # - that the set of university names in each year is the same
     # Return:
     # - True if they are the same, and False otherwise.
-    raise NotImplementedError
+    
+    colnames_0 = dfs[0]["university"]
+    colnames_1 = dfs[1]["university"]
+    colnames_2 = dfs[2]["university"]
+
+    return set(colnames_0) == set(colnames_1) == set(colnames_2)
 
 """
 3b (commentary).
@@ -189,6 +210,9 @@ Did the checks pass or fail?
 Comment below and explain why.
 
 === ANSWER Q3b BELOW ===
+
+The checks on ROWS didn't fail because the number of rows/columns don't change year to year. 
+However, the universities do change, so it did change slightly. 
 
 === END OF Q3b ANSWER ===
 """
@@ -217,10 +241,11 @@ Hint:
 def q4(dfs):
     # Sample 5 rows from each dataframe
     # Print out the samples
-    raise NotImplementedError
-
+    
     # Answer as a list of 5 university names
-    return []
+    return (dfs[1].sample(5)['university'].values)
+
+
 
 """
 Once you have implemented this part,
@@ -232,13 +257,14 @@ and 3 weaknesses of this dataset.
 
 === ANSWER Q4b BELOW ===
 Strengths:
-1.
-2.
+1. It's international - lots of representation from the UK
+2. Cleaned and standardized data across categories (0 - 100 rating)
 
 Weaknesses:
-1.
-2.
-3.
+1. Only 100 rows for each year
+2. Pretty wide when comparing rows to number of columns
+3. University is stored as a string instead of some kind of code.
+
 === END OF Q4b ANSWER ===
 """
 
@@ -262,18 +288,33 @@ Example: if there are 5 null values in the first column, 3 in the second, 4 in t
     [5, 3, 4, ...]
 """
 
-def q5a(dfs):
-    # TODO
-    raise NotImplementedError
+def q5a(dfs, verbose = False):
+
+
+    buffer = io.StringIO()
+    for df in dfs:
+        df.info(buf = buffer)
+
+    if verbose:
+        info_str = buffer.getvalue()
+        print(info_str)
+    buffer.close()
+
+    return [100, 100, 100]
     # Remember to return the list here
     # (Since .info() does not return any values,
     # for this part, you will need to copy and paste
     # the output as a hardcoded list.)
 
 def q5b(dfs):
-    # TODO
-    raise NotImplementedError
-    # Remember to return the list here
+    df_2021 = dfs[1]
+
+    number_nans = df_2021.count(axis = 0)
+    output = []
+    for axis, value in number_nans.items():
+        output.append(value)
+
+    return output
 
 """
 5c.
@@ -282,10 +323,12 @@ Also fill this in with how many non-null values are expected.
 We will use this in the unit tests below.
 """
 
+# TODO: Is this supposed to be zero?
+
 def q5c():
-    raise NotImplementedError
+    # raise NotImplementedError
     # TODO: fill this in with the expected number
-    num_non_null = 0
+    num_non_null = 100
     return num_non_null
 
 """
@@ -314,29 +357,30 @@ from each unit test (function beginning with `test_`).
 Then, run `pytest part1.py` in the terminal.
 """
 
-@pytest.mark.skip
+# @pytest.mark.skip
 def test_q1():
     dfs = load_input()
     assert len(dfs) == 3
     assert all([isinstance(df, pd.DataFrame) for df in dfs])
 
-@pytest.mark.skip
+# @pytest.mark.skip
 def test_q2():
     dfs = load_input()
     assert q2(dfs)
 
-@pytest.mark.skip
+# @pytest.mark.skip
+@pytest.mark.xfail
 def test_q3():
     dfs = load_input()
     assert q3(dfs)
 
-@pytest.mark.skip
+# @pytest.mark.skip
 def test_q4():
     dfs = load_input()
     samples = q4(dfs)
     assert len(samples) == 5
 
-@pytest.mark.skip
+# @pytest.mark.skip
 def test_q5():
     dfs = load_input()
     answers = q5a(dfs) + q5b(dfs)
@@ -350,12 +394,18 @@ def test_q5():
 
 === ANSWER Q6a BELOW ===
 
+No, all the tests seem like they pass. 
+
 === END OF Q6a ANSWER ===
 
 6b. For each test that fails, is it because your code
 is wrong or because the test is wrong?
 
 === ANSWER Q6b BELOW ===
+
+I think test 3 fails because the universities every year might change. 
+The test asserts `q3(dfs)`, but it should be false since the universities on 
+the data change every year. 
 
 === END OF Q6b ANSWER ===
 
@@ -373,8 +423,10 @@ Please include expected failures (@pytest.mark.xfail).
 """
 
 def q6c():
-    # TODO
-    raise NotImplementedError
+    """
+    I have one expected failure in `test_q3()`
+    """
+    return 1
 
 """
 ===== End of interlude =====
