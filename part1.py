@@ -63,6 +63,7 @@ To begin, let's load the Pandas library.
 """
 
 import pandas as pd
+import seaborn as sn
 
 """
 1. Load the dataset into Pandas
@@ -717,8 +718,7 @@ def q15_helper(dfs):
 def q15(top_10):
     # Enter code here
 
-    top_10 = q15_helper(
-    raise NotImplementedError
+    return top_10.shape
 
 """
 16.
@@ -733,12 +733,12 @@ As your answer, return the new column names.
 
 def q16(top_10):
     # Enter code here
-    # TODO
-    raise NotImplementedError
+    return top_10.columns
 
 """
 17a.
-Draw a suitable plot to show how the overall scores of the Top 10 universities varied over the three years. Clearly label your graph and attach a legend. Explain why you chose the particular plot.
+Draw a suitable plot to show how the overall scores of the Top 10 universities varied over the three years. 
+Clearly label your graph and attach a legend. Explain why you chose the particular plot.
 
 Save your plot in output/16.png.
 
@@ -751,15 +751,35 @@ Note:
 
 def q17a(top_10):
     # Enter code here
-    # TODO
-    raise NotImplementedError
-    # return "output/17a.png"
+    plt.clf()
+    years = [2019, 2020, 2021]
+    plt.figure(figsize=(10, 6))
+
+    for _, row in top_10.iterrows():
+        plt.plot(years, [row["overall_score_2019"], row["overall_score_2020"], row["overall_score_2021"]],
+                 label = row["university"])
+    
+    plt.xlabel('year')
+    plt.ylabel('Overall Score')
+    plt.title("University Overall Scores (2019-2021)")
+    plt.legend(loc='upper right', bbox_to_anchor=(1.3, 1.0))
+    plt.tight_layout()
+    plt.savefig("output/16.png")
+    # plt.show()
 
 """
 17b.
-What do you observe from the plot above? Which university has remained consistent in their scores? Which have increased/decreased over the years?
+What do you observe from the plot above? 
+Which university has remained consistent in their scores?
+Which have increased/decreased over the years?
 
 === ANSWER Q17a BELOW ===
+
+Wow, MIT has stayed so consistent in their overall ranking!
+It looks like University of Chicago is on the decline, along with 
+University of Cambridge. Overall though, most schools seem fairly 
+consistent (not a ton of decline, maybe only a few percentage 
+points).
 
 === END OF Q17b ANSWER ===
 """
@@ -771,7 +791,9 @@ We're almost done!
 
 Let's look at another useful tool to get an idea about how different variables are corelated to each other. We call it a **correlation matrix**
 
-A correlation matrix provides a correlation coefficient (a number between -1 and 1) that tells how strongly two variables are correlated. Values closer to -1 mean strong negative correlation whereas values closer to 1 mean strong positve correlation. Values closer to 0 show variables having no or little correlation.
+A correlation matrix provides a correlation coefficient (a number between -1 and 1) that tells how strongly two variables are correlated.
+Values closer to -1 mean strong negative correlation whereas values closer to 1 mean strong positve correlation.
+Values closer to 0 show variables having no or little correlation.
 
 You can learn more about correlation matrices from here: https://www.statology.org/how-to-read-a-correlation-matrix/
 
@@ -786,16 +808,25 @@ As the answer to this part, return the name of the plot you saved.
 """
 
 def q18(dfs):
-    # Enter code here
-    # TODO
-    raise NotImplementedError
-    # return "output/18.png"
+    only_numerical_cols = dfs[1].drop(labels = ["university", "region"], axis = 1)
+    corr_matrix = only_numerical_cols.corr()
+    
+    plt.clf()
+    sn.heatmap(corr_matrix, annot=True)
+    plt.title("Correlation Matrix of 2021 Variables")
+    plt.tight_layout()
+    plt.savefig("output/18.png")
+
+    return "output/18.png"
 
 """
 19. Comment on at least one entry in the matrix you obtained in the previous
 part that you found surprising or interesting.
 
 === ANSWER Q19 BELOW ===
+
+It's pretty interesting how well correlated overall score and citations per
+faculty are. Not sure if that's a good thing. 
 
 === END OF Q19 ANSWER ===
 """
@@ -831,16 +862,20 @@ b.
 Use your new column to sort the data by the new values and return the top 10 universities.
 """
 
+import random
 def q20a(dfs):
-    # TODO
-    raise NotImplementedError
-    # For your answer, return the score for Berkeley in the new column.
+    
+
+    for df in dfs:
+        df["new"] = [random.randint(40, 99) for _ in range(len(df))]
+        df.loc[df["university"] == "University of California, Berkeley (UCB)", "new"] = 100
+        
+    return dfs
 
 def q20b(dfs):
     # TODO
-    raise NotImplementedError
     # For your answer, return the top 10 universities.
-
+    return dfs[1].sort_values("new", ascending=False).head(10)
 """
 21. Exploring data manipulation and falsification, continued
 
@@ -859,7 +894,9 @@ Return the top 10 universities from the falsified data.
 
 def q21():
     # TODO
-    raise NotImplementedError
+    falsified_data = pd.read_csv('data/2021_falsified.csv', encoding='latin-1')
+    # print(falsified_data)
+    print(falsified_data.sort_values("Overall Score", ascending = False).head(10))
 
 """
 22. Exploring data manipulation and falsification, continued
@@ -870,6 +907,13 @@ if you were a "bad actor" trying to manipulate the rankings?
 Which do you think would be the most difficult to detect?
 
 === ANSWER Q22 BELOW ===
+
+I think that the data falsification is harder to detect because
+the changes aren't written in code somewhere for us to see. 
+
+Manipulation is something that I could look through
+and spot much easier in code. However, I couldn't
+readily see the edit history of a csv file. 
 
 === END OF Q22 ANSWER ===
 """
