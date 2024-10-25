@@ -1,21 +1,64 @@
 q1,3
 q2,True
 q3a,False
-q4,['Brown University' 'University of Zurich' 'University of Southampton'
- 'University of Illinois at Urbana-Champaign'
- 'National Taiwan University (NTU)']
+q4,['University of Birmingham' 'Tsinghua University' 'Durham University'
+ 'The University of Queensland' 'University of California, Berkeley (UCB)']
 q5a,[100, 100, 100]
 q5b,[100, 100, 100, 100, 100, 100, 100, 100]
 q5c,100
-q6c,Not Implemented
-q7,Not Implemented
-q8a,Not Implemented
-q9,Not Implemented
-q10,Not Implemented
-q11,Not Implemented
-q12,Not Implemented
-q13,Not Implemented
-q14a,Not Implemented
+q6c,1
+q7,[    rank                                     university       region  academic reputation  employer reputation  faculty student  citations per faculty  overall score  year
+0      1    Massachusetts Institute of Technology (MIT)          USA                100.0                100.0            100.0                   99.8          100.0  2019
+1      2                            Stanford University          USA                100.0                100.0            100.0                   99.0           98.6  2019
+2      3                             Harvard University          USA                100.0                100.0             99.3                   99.8           98.5  2019
+3      4   California Institute of Technology (Caltech)          USA                 98.7                 81.2            100.0                  100.0           97.2  2019
+4      5                           University of Oxford           UK                100.0                100.0            100.0                   83.0           96.8  2019
+..   ...                                            ...          ...                  ...                  ...              ...                    ...            ...   ...
+95    96                      University of Southampton           UK                 53.1                 53.4             65.5                   62.4           61.6  2019
+96    97                       University of St Andrews     Scotland                 43.2                 47.7             69.0                   77.0           61.4  2019
+97    98  University of Science and Technology of China        China                 53.7                 35.9             74.2                   98.4           60.8  2019
+98    99             Eindhoven University of Technology  Netherlands                 29.7                 51.2             82.1                   94.9           59.8  2019
+99   100                              Purdue University          USA                 65.7                 60.7             35.2                   58.3           59.5  2019
+
+[100 rows x 9 columns],     rank                                    university  region  academic reputation  employer reputation  faculty student  citations per faculty  overall score  year
+0      1   Massachusetts Institute of Technology (MIT)     USA                 99.8                 94.1            100.0                  100.0          100.0  2020
+1      2                           Stanford University     USA                 98.6                 67.7             99.8                  100.0           98.4  2020
+2      3                            Harvard University     USA                 99.6                 62.2             86.3                  100.0           97.4  2020
+3      4                          University of Oxford      UK                 84.7                 98.5             99.7                  100.0           97.2  2020
+4      5  California Institute of Technology (Caltech)     USA                100.0                 87.3             99.4                   97.8           96.9  2020
+..   ...                                           ...     ...                  ...                  ...              ...                    ...            ...   ...
+95    96                      University of Nottingham      UK                 49.7                 82.1             92.1                   60.3           60.8  2020
+96    97                     University of Southampton      UK                 68.1                 92.8             96.1                   50.8           60.6  2020
+97    98                             Boston University     USA                 62.1                 88.6             33.8                   63.1           60.5  2020
+98    99             KTH Royal Institute of Technology  Sweden                 72.8                 48.7             96.9                   47.5           60.5  2020
+99   100                      University of St Andrews      UK                 67.4                 99.8             98.7                   45.2           59.9  2020
+
+[100 rows x 9 columns],     rank                                    university  region  academic reputation  employer reputation  faculty student  citations per faculty  overall score  year
+0      1   Massachusetts Institute of Technology (MIT)     USA                 99.8                 94.1            100.0                  100.0          100.0  2021
+1      2                           Stanford University     USA                 98.6                 67.7             99.8                  100.0           98.4  2021
+2      3                            Harvard University     USA                 99.6                 62.2             86.3                  100.0           97.4  2021
+3      4                          University of Oxford      UK                 84.7                 98.5             99.7                  100.0           97.2  2021
+4      5  California Institute of Technology (Caltech)     USA                100.0                 87.3             99.4                   97.8           96.9  2021
+..   ...                                           ...     ...                  ...                  ...              ...                    ...            ...   ...
+95    96                      University of Nottingham      UK                 49.7                 82.1             92.1                   60.3           60.8  2021
+96    97                     University of Southampton      UK                 68.1                 92.8             96.1                   50.8           60.6  2021
+97    98                             Boston University     USA                 62.1                 88.6             33.8                   63.1           60.5  2021
+98    99             KTH Royal Institute of Technology  Sweden                 72.8                 48.7             96.9                   47.5           60.5  2021
+99   100                      University of St Andrews     USA                 67.4                 99.8             98.7                   45.2           59.9  2021
+
+[100 rows x 9 columns]]
+q8a,29
+q9,None
+q10,5
+q11,academic reputation      62.35
+employer reputation      59.40
+faculty student          93.10
+citations per faculty    58.55
+overall score            61.15
+Name: Sweden, dtype: float64
+q12,('Singapore', 'South Korea')
+q13,output/13a.png
+q14a,output/14a.png
 q15,Not Implemented
 q16,Not Implemented
 q17,Not Implemented
@@ -23,4 +66,4 @@ q18,Not Implemented
 q20a,Not Implemented
 q20b,Not Implemented
 q21,Not Implemented
-PART 1,16
+PART 1,7

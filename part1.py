@@ -443,9 +443,17 @@ As your answer to this part, return the number of columns in each dataframe afte
 """
 
 def q7(dfs):
-    # TODO
-    raise NotImplementedError
+    # raise NotImplementedError
     # Remember to return the list here
+
+    num_columns = len(NEW_COLUMNS)
+    years = [2019, 2020, 2021]
+    for year, df in zip(years, dfs):
+        df.insert(num_columns, column = "year", value = year)
+
+    return dfs
+
+
 
 """
 8a.
@@ -456,8 +464,17 @@ As your answer, return the count for "USA" in 2021.
 
 def q8a(dfs):
     # Enter Code here
-    # TODO
-    raise NotImplementedError
+
+    res = None
+    for index, element in enumerate(dfs):
+        grouped = element.groupby("region").size().reset_index(name="count").sort_values(by="count", ascending = False)
+
+        print(grouped)
+
+        if index == 1:
+            res = grouped
+
+    return res.iloc[0].values[1]
     # Remember to return the count here
 
 """
@@ -465,6 +482,10 @@ def q8a(dfs):
 Do you notice some trend? Comment on what you observe and why might that be consistent throughout the years.
 
 === ANSWER Q8b BELOW ===
+
+USA! USA! USA! USA! USA!
+
+The USA has the best universities worldwide. Also, it's a US survey so there could be bias there. 
 
 === END OF Q8b ANSWER ===
 """
@@ -477,14 +498,19 @@ As your answer, return the list of averages (for all attributes)
 in the order they appear in the dataframe:
 academic reputation, employer reputation, faculty student, citations per faculty, overall score.
 
+
 The list should contain 5 elements.
 """
+average_attributes = ['academic reputation', 'employer reputation', 'faculty student', 'citations per faculty', 'overall score']
 
 def q9(dfs):
     # Enter code here
-    # TODO
-    raise NotImplementedError
-    # Return the list here
+    data_2021 = dfs[2]
+
+
+    # print(data_2021[[NEW_COLUMNS]].mean())
+    avg_scores = data_2021[average_attributes].mean()
+    print([i[1] for i in avg_scores.items()])
 
 """
 10.
@@ -500,7 +526,12 @@ def q10_helper(dfs):
     # Enter code here
     # TODO
     # Placeholder for the avg_2021 dataframe
-    avg_2021 = pd.DataFrame()
+
+    avg_2021 = dfs[2].drop(labels = ["rank", "year", "university"], axis = 1).groupby("region").mean()
+    # dfs[2]
+    print(avg_2021)
+
+
     return avg_2021
 
 def q10(avg_2021):
@@ -512,8 +543,10 @@ def q10(avg_2021):
     (That is, return the integer 5)
     """
     # Enter code here
-    raise NotImplementedError
+    # raise NotImplementedError
     # Return 5
+    print(avg_2021.head())
+    return 5
 
 """
 ===== Questions 11-14: Exploring the avg_2021 dataframe =====
@@ -525,14 +558,25 @@ As your answer to this part, return the first row of the sorted dataframe.
 """
 
 def q11(avg_2021):
-    raise NotImplementedError
+    sorted_avg_scores = avg_2021.sort_values(by = "overall score") 
+    print(sorted_avg_scores)
+    return sorted_avg_scores.iloc[0]
+
+def q12_helper(dfs):
+    for df in dfs:
+        avg_data = df.drop(labels = ["rank", "year", "university"], axis = 1).groupby("region").mean()
+        print(avg_data.sort_values(by = "overall score", ascending = False)["overall score"])
+
 
 """
 12a.
 What do you observe from the table above? Which country tops the ranking?
+ ---- It looks like Singapore, Canada, Switzerland, USA, and UK all top the ranking
 
 What is one country that went down in the rankings
 between 2019 and 2021?
+
+ ---- South Korea went down in rankings. 
 
 You will need to load the data from 2019 to get the answer to this part.
 You may choose to do this
@@ -550,8 +594,8 @@ For the answer to this part return the name of the country that tops the ranking
 """
 
 def q12a(avg_2021):
-    raise NotImplementedError
-    return ("TODO", "TODO")
+    # raise NotImplementedError
+    return ("Singapore", "South Korea")
 
 """
 12b.
@@ -559,6 +603,8 @@ Comment on why the country above is at the top of the list.
 (Note: This is an open-ended question.)
 
 === ANSWER Q12b BELOW ===
+
+I think that Singapore might have better funding than other countries. 
 
 === END OF Q12b ANSWER ===
 """
@@ -579,14 +625,29 @@ import matplotlib.pyplot as plt
 def q13a(avg_2021):
     # Plot the box and whisker plot
     # TODO
-    raise NotImplementedError
-    # return "output/13a.png"
+    # raise NotImplementedError
+    num_attributes = avg_2021.shape[1]
+    _, axes = plt.subplots(nrows=2, ncols = 3, figsize = (10, 10))
+    for i, column in enumerate(avg_2021.columns):
+        axes[i // 3][i % 3].boxplot(avg_2021[column])  # Plot the boxplot for each attribute
+        axes[i // 3][i % 3].set_title(f'{column}')
+    
+    # Adjust layout so subplots don’t overlap
+    plt.tight_layout()
+    plt.savefig("output/13a.png")
+    plt.clf()
+    # plt.show()
+    return "output/13a.png"
+
 
 """
 b. Do you observe any anomalies in the box and whisker
 plot?
 
 === ANSWER Q13b BELOW ===
+
+It's interesting how the whisker for academic reputation and 
+faculty student (ratio) seem to have some very low scores. 
 
 === END OF Q13b ANSWER ===
 """
@@ -603,14 +664,23 @@ As the answer to this part, return the name of the plot you saved.
 
 def q14a(avg_2021):
     # Enter code here
-    # TODO
-    raise NotImplementedError
-    # return "output/14a.png"
+    fig, axes = plt.subplots(nrows = 1, ncols = 2, figsize = (10, 3))
+    axes[0].boxplot(avg_2021["faculty student"])
+    axes[0].set_title("faculty student")
+    axes[1].boxplot(avg_2021["overall score"])
+    axes[1].set_title("overall score")
+    plt.tight_layout()
+    # plt.clf()
+    plt.savefig("output/14a.png")
+    return "output/14a.png"
 
 """
 Do you observe any general trend?
 
 === ANSWER Q14b BELOW ===
+
+It looks like most people have good faculty-student ratings and 
+the overall score really tends to be about 70. 
 
 === END OF Q14b ANSWER ===
 
@@ -634,14 +704,19 @@ As your answer, return the shape of the new dataframe.
 
 def q15_helper(dfs):
     # Return the new dataframe
-    # TODO
-    # Placeholder:
-    top_10 = pd.DataFrame()
+
+    data_2019 = dfs[0][["university", "overall score"]].loc[0:10].rename(columns = {"overall score": "overall_score_2019"})
+    data_2020 = dfs[1][["university", "overall score"]].loc[0:10].rename(columns = {"overall score": "overall_score_2020"})
+    data_2021 = dfs[2][["university", "overall score"]].loc[0:10].rename(columns = {"overall score": "overall_score_2021"})
+
+    first_two = data_2019.merge(data_2020, on = "university")
+    top_10 = first_two.merge(data_2021, on = "university")
+
     return top_10
 
 def q15(top_10):
     # Enter code here
-    # TODO
+    merged_lists = 
     raise NotImplementedError
 
 """
@@ -863,6 +938,9 @@ def PART_1_PIPELINE():
 
     # Questions 11-15
     log_answer("q11", q11, avg_2021)
+
+    q12_helper(dfs)
+
     log_answer("q12", q12a, avg_2021)
     # 12b: commentary
     log_answer("q13", q13a, avg_2021)
