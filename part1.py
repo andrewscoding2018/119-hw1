@@ -716,7 +716,8 @@ def q15_helper(dfs):
 
 def q15(top_10):
     # Enter code here
-    merged_lists = 
+
+    top_10 = q15_helper(
     raise NotImplementedError
 
 """
