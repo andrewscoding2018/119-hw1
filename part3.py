@@ -37,6 +37,7 @@ convert it to an integer and return it. You should get "12345".
 
 """
 
+import subprocess
 # You may need to conda install requests or pip3 install requests
 import requests
 
@@ -46,25 +47,32 @@ def download_file(url, filename):
         f.write(r.content)
 
 def clone_repo(repo_url):
-    # TODO
-    raise NotImplementedError
+    """Clones the GitHub repository from the repo URL"""
+    subprocess.run(f"git clone {repo_url}", shell=True, check=True)
+    # raise NotImplementedError
 
 def run_script(script_path, data_path):
-    # TODO
-    raise NotImplementedError
+    subprocess.run(f"python {script_path} {data_path}", shell = True, check=True)
 
 def setup(repo_url, data_url, script_path):
-    # TODO
-    raise NotImplementedError
+    clone_repo(repo_url)
+    download_file(data_url, "data.txt")
+    run_script(script_path, "data.txt")
+
+    with open("output/test-output.txt", "r", encoding = "utf-8") as f:
+        return int(f.read().strip())
+
+    
 
 def q1():
     # Call setup as described in the prompt
-    # TODO
-    # Read the file test-output.txt to a string
-    # TODO
-    # Return the integer value of the output
-    # TODO
-    raise NotImplementedError
+    result = setup(
+        "https://github.com/DavisPL-Teaching/119-hw1",
+        "https://raw.githubusercontent.com/DavisPL-Teaching/119-hw1/refs/heads/main/data/test-input.txt",
+        "test-script.py"
+    )
+
+    return result
 
 """
 2.
@@ -124,15 +132,22 @@ any packages?
 
 def setup_for_new_machine():
     # TODO
-    raise NotImplementedError
+    subprocess.run("pip install pandas")
+    subprocess.run("pip install requests")
+    subprocess.run("pip install numpy")
+    result = setup(
+        "https://github.com/DavisPL-Teaching/119-hw1",
+        "https://raw.githubusercontent.com/DavisPL-Teaching/119-hw1/refs/heads/main/data/test-input.txt",
+        "test-script.py"
+    )
+
 
 def q3():
     # As your answer, return a string containing
     # the operating system name that you assumed the
     # new machine to have.
     # TODO
-    raise NotImplementedError
-    # os =
+    os = "Linux"
     return os
 
 """
@@ -145,6 +160,9 @@ scripts like setup() and setup_for_new_machine()
 in their day-to-day jobs?
 
 === ANSWER Q4 BELOW ===
+
+I feel like they would have to write these kinds of scripts 
+10% of the time day to day. 
 
 === END OF Q4 ANSWER ===
 
@@ -206,21 +224,28 @@ Hints:
    (shell command that spits output) | wc -l
 """
 
+import os
+
 def pipeline_shell():
     # TODO
-    raise NotImplementedError
-    # Return resulting integer
+    line_count = os.popen("cat data/population.csv | tail -n +1 | wc -l").read()
+    return line_count
 
 def pipeline_pandas():
-    # TODO
-    raise NotImplementedError
-    # Return resulting integer
+    pop_df = pd.read_csv("data/population.csv")
+    return pop_df["Entity"].count()
 
 def q6():
     # As your answer to this part, check that both
     # integers are the same and return one of them.
-    # TODO
-    raise NotImplementedError
+    # print("\n\n")
+    # print(type(pipeline_pandas()))
+    # print(pipeline_shell())
+    # print("\n\n")
+    assert int(pipeline_pandas()) == int(pipeline_shell())
+
+    return pipeline_shell()
+    # raise NotImplementedError
 
 """
 Let's do a performance comparison between the two methods.
@@ -231,13 +256,21 @@ from part 2 to get answers for both pipelines.
 
 7. Throughput
 """
+from part2 import LatencyHelper, ThroughputHelper
 
 def q7():
     # Return a tuple of two floats
     # throughput for shell, throughput for pandas
     # (in rows per second)
-    # TODO
-    raise NotImplementedError
+
+    h = ThroughputHelper()
+    h.add_pipeline("shell", 59177, lambda: pipeline_shell())
+    h.add_pipeline("pandas", 59177, lambda: pipeline_pandas())
+    throughputs = h.compare_throughput()
+    h.generate_plot("output/q7_chart.png")
+
+    return tuple(throughputs)
+
 
 """
 8. Latency
@@ -247,14 +280,23 @@ def q8():
     # Return a tuple of two floats
     # latency for shell, latency for pandas
     # (in milliseconds)
-    # TODO
-    raise NotImplementedError
+
+    h = LatencyHelper()
+    h.add_pipeline("shell", lambda: pipeline_shell())
+    h.add_pipeline("pandas", lambda: pipeline_pandas())
+    lats = h.compare_latency()
+    h.generate_plot("output/q8_chart.png")
+
+    return tuple(lats)
 
 """
 9. Which method is faster?
 Comment on anything else you notice below.
 
 === ANSWER Q9 BELOW ===
+
+The throughput of the pandas is much better but 
+the latency of shell is much better. 
 
 === END OF Q9 ANSWER ===
 """
