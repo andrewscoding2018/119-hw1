@@ -1,0 +1,750 @@
+('ABW', Year                        1882.416667
+Population (historical)    51599.370370
+Name: ABW, dtype: float64)
+('AFG', Year                       1.548759e+03
+Population (historical)    8.085438e+06
+Name: AFG, dtype: float64)
+('AGO', Year                       1.548759e+03
+Population (historical)    5.508934e+06
+Name: AGO, dtype: float64)
+('AIA', Year                       1447.975610
+Population (historical)    6075.276423
+Name: AIA, dtype: float64)
+('ALB', Year                       1.548759e+03
+Population (historical)    1.154657e+06
+Name: ALB, dtype: float64)
+('AND', Year                        1548.758621
+Population (historical)    15266.333333
+Name: AND, dtype: float64)
+('ANT', Year                         1825.306122
+Population (historical)    107850.724490
+Name: ANT, dtype: float64)
+('ARE', Year                         1548.758621
+Population (historical)    867255.697318
+Name: ARE, dtype: float64)
+('ARG', Year                       1.548759e+03
+Population (historical)    1.142630e+07
+Name: ARG, dtype: float64)
+('ARM', Year                       1.548759e+03
+Population (historical)    1.223647e+06
+Name: ARM, dtype: float64)
+('ASM', Year                        1776.732759
+Population (historical)    26102.974138
+Name: ASM, dtype: float64)
+('ATG', Year                        1548.758621
+Population (historical)    40959.954023
+Name: ATG, dtype: float64)
+('AUS', Year                       1.548759e+03
+Population (historical)    6.286414e+06
+Name: AUS, dtype: float64)
+('AUT', Year                       1.548759e+03
+Population (historical)    5.205429e+06
+Name: AUT, dtype: float64)
+('AZE', Year                       1.548759e+03
+Population (historical)    2.920225e+06
+Name: AZE, dtype: float64)
+('BDI', Year                       1.548759e+03
+Population (historical)    2.550140e+06
+Name: BDI, dtype: float64)
+('BEL', Year                       1.548759e+03
+Population (historical)    6.204811e+06
+Name: BEL, dtype: float64)
+('BEN', Year                       1.548759e+03
+Population (historical)    2.581359e+06
+Name: BEN, dtype: float64)
+('BES', Year                        1986.50000
+Population (historical)    14127.27027
+Name: BES, dtype: float64)
+('BFA', Year                       1.548759e+03
+Population (historical)    4.299731e+06
+Name: BFA, dtype: float64)
+('BGD', Year                       1.548759e+03
+Population (historical)    4.521270e+07
+Name: BGD, dtype: float64)
+('BGR', Year                       1.548759e+03
+Population (historical)    4.431225e+06
+Name: BGR, dtype: float64)
+('BHR', Year                         1548.758621
+Population (historical)    219840.647510
+Name: BHR, dtype: float64)
+('BHS', Year                        1593.176923
+Population (historical)    99344.669231
+Name: BHS, dtype: float64)
+('BIH', Year                       1.548759e+03
+Population (historical)    1.949100e+06
+Name: BIH, dtype: float64)
+('BLM', Year                       1977.987179
+Population (historical)    5149.564103
+Name: BLM, dtype: float64)
+('BLR', Year                       1.548759e+03
+Population (historical)    5.157292e+06
+Name: BLR, dtype: float64)
+('BLZ', Year                        1548.758621
+Population (historical)    77071.402299
+Name: BLZ, dtype: float64)
+('BMU', Year                        1964.677778
+Population (historical)    47767.811111
+Name: BMU, dtype: float64)
+('BOL', Year                       1.548759e+03
+Population (historical)    3.020890e+06
+Name: BOL, dtype: float64)
+('BRA', Year                       1.548759e+03
+Population (historical)    4.876863e+07
+Name: BRA, dtype: float64)
+('BRB', Year                         1803.264822
+Population (historical)    165261.683794
+Name: BRB, dtype: float64)
+('BRN', Year                        1548.758621
+Population (historical)    77065.524904
+Name: BRN, dtype: float64)
+('BTN', Year                         1548.758621
+Population (historical)    316818.126437
+Name: BTN, dtype: float64)
+('BWA', Year                         1548.758621
+Population (historical)    460471.264368
+Name: BWA, dtype: float64)
+('CAF', Year                       1.548759e+03
+Population (historical)    1.407187e+06
+Name: CAF, dtype: float64)
+('CAN', Year                       1.548759e+03
+Population (historical)    1.032073e+07
+Name: CAN, dtype: float64)
+('CHE', Year                       1.548759e+03
+Population (historical)    3.658998e+06
+Name: CHE, dtype: float64)
+('CHL', Year                       1.548759e+03
+Population (historical)    5.175374e+06
+Name: CHL, dtype: float64)
+('CHN', Year                       1.548759e+03
+Population (historical)    5.425177e+08
+Name: CHN, dtype: float64)
+('CIV', Year                       1.548759e+03
+Population (historical)    4.562236e+06
+Name: CIV, dtype: float64)
+('CMR', Year                       1.548759e+03
+Population (historical)    5.202360e+06
+Name: CMR, dtype: float64)
+('COD', Year                       1.548759e+03
+Population (historical)    1.684464e+07
+Name: COD, dtype: float64)
+('COG', Year                       1.548759e+03
+Population (historical)    1.069315e+06
+Name: COG, dtype: float64)
+('COK', Year                        1970.770115
+Population (historical)    16385.827586
+Name: COK, dtype: float64)
+('COL', Year                       1.548759e+03
+Population (historical)    1.114760e+07
+Name: COL, dtype: float64)
+('COM', Year                         1882.752066
+Population (historical)    186935.590909
+Name: COM, dtype: float64)
+('CPV', Year                         1903.089362
+Population (historical)    190718.119149
+Name: CPV, dtype: float64)
+('CRI', Year                       1.548759e+03
+Population (historical)    1.010061e+06
+Name: CRI, dtype: float64)
+('CUB', Year                       1.548759e+03
+Population (historical)    3.858743e+06
+Name: CUB, dtype: float64)
+('CUW', Year                         1986.500000
+Population (historical)    150269.783784
+Name: CUW, dtype: float64)
+('CYM', Year                        1978.5875
+Population (historical)    27681.8125
+Name: CYM, dtype: float64)
+('CYP', Year                         1548.758621
+Population (historical)    390965.383142
+Name: CYP, dtype: float64)
+('CZE', Year                       1.548759e+03
+Population (historical)    7.689954e+06
+Name: CZE, dtype: float64)
+('DEU', Year                       1.548759e+03
+Population (historical)    4.899437e+07
+Name: DEU, dtype: float64)
+('DJI', Year                         1548.758621
+Population (historical)    167444.521073
+Name: DJI, dtype: float64)
+('DMA', Year                        1735.257812
+Population (historical)    36332.722656
+Name: DMA, dtype: float64)
+('DNK', Year                       1.548759e+03
+Population (historical)    2.773706e+06
+Name: DNK, dtype: float64)
+('DOM', Year                       1.548759e+03
+Population (historical)    2.214279e+06
+Name: DOM, dtype: float64)
+('DZA', Year                       1.548759e+03
+Population (historical)    9.509360e+06
+Name: DZA, dtype: float64)
+('ECU', Year                       1.548759e+03
+Population (historical)    3.604795e+06
+Name: ECU, dtype: float64)
+('EGY', Year                       1.548759e+03
+Population (historical)    2.184753e+07
+Name: EGY, dtype: float64)
+('ERI', Year                         1548.758621
+Population (historical)    860270.210728
+Name: ERI, dtype: float64)
+('ESH', Year                         1792.182609
+Population (historical)    133984.791304
+Name: ESH, dtype: float64)
+('ESP', Year                       1.548759e+03
+Population (historical)    2.158676e+07
+Name: ESP, dtype: float64)
+('EST', Year                         1548.758621
+Population (historical)    795194.862069
+Name: EST, dtype: float64)
+('ETH', Year                       1.548759e+03
+Population (historical)    2.503038e+07
+Name: ETH, dtype: float64)
+('FIN', Year                       1.548759e+03
+Population (historical)    2.666212e+06
+Name: FIN, dtype: float64)
+('FJI', Year                         1818.357143
+Population (historical)    298432.996032
+Name: FJI, dtype: float64)
+('FLK', Year                       1936.643564
+Population (historical)    2359.396040
+Name: FLK, dtype: float64)
+('FRA', Year                       1.548759e+03
+Population (historical)    3.844812e+07
+Name: FRA, dtype: float64)
+('FRO', Year                        1199.214286
+Population (historical)    26554.888889
+Name: FRO, dtype: float64)
+('FSM', Year                        1911.500000
+Population (historical)    42274.151786
+Name: FSM, dtype: float64)
+('GAB', Year                         1548.758621
+Population (historical)    495714.674330
+Name: GAB, dtype: float64)
+('GBR', Year                       1.548759e+03
+Population (historical)    3.599606e+07
+Name: GBR, dtype: float64)
+('GEO', Year                       1.548759e+03
+Population (historical)    2.405632e+06
+Name: GEO, dtype: float64)
+('GGY', Year                        1981.855263
+Population (historical)    54969.684211
+Name: GGY, dtype: float64)
+('GHA', Year                       1.548759e+03
+Population (historical)    6.176402e+06
+Name: GHA, dtype: float64)
+('GIB', Year                        1981.855263
+Population (historical)    27383.131579
+Name: GIB, dtype: float64)
+('GIN', Year                       1.548759e+03
+Population (historical)    2.877687e+06
+Name: GIN, dtype: float64)
+('GLP', Year                         1199.214286
+Population (historical)    236955.103175
+Name: GLP, dtype: float64)
+('GMB', Year                         1548.758621
+Population (historical)    408905.789272
+Name: GMB, dtype: float64)
+('GNB', Year                         1548.758621
+Population (historical)    466638.942529
+Name: GNB, dtype: float64)
+('GNQ', Year                         1548.758621
+Population (historical)    261585.452107
+Name: GNQ, dtype: float64)
+('GRC', Year                       1.548759e+03
+Population (historical)    5.336632e+06
+Name: GRC, dtype: float64)
+('GRD', Year                        1548.758621
+Population (historical)    58617.984674
+Name: GRD, dtype: float64)
+('GRL', Year                        1901.896226
+Population (historical)    35393.009434
+Name: GRL, dtype: float64)
+('GTM', Year                       1.548759e+03
+Population (historical)    3.363515e+06
+Name: GTM, dtype: float64)
+('GUF', Year                        1371.782258
+Population (historical)    75449.491935
+Name: GUF, dtype: float64)
+('GUM', Year                         1971.904762
+Population (historical)    109536.761905
+Name: GUM, dtype: float64)
+('GUY', Year                         1548.758621
+Population (historical)    335857.965517
+Name: GUY, dtype: float64)
+('HKG', Year                       1.548759e+03
+Population (historical)    1.697499e+06
+Name: HKG, dtype: float64)
+('HND', Year                       1.548759e+03
+Population (historical)    1.769504e+06
+Name: HND, dtype: float64)
+('HRV', Year                       1.548759e+03
+Population (historical)    2.535929e+06
+Name: HRV, dtype: float64)
+('HTI', Year                       1.634077e+03
+Population (historical)    2.793058e+06
+Name: HTI, dtype: float64)
+('HUN', Year                       1.548759e+03
+Population (historical)    6.561685e+06
+Name: HUN, dtype: float64)
+('IDN', Year                       1.548759e+03
+Population (historical)    6.821833e+07
+Name: IDN, dtype: float64)
+('IMN', Year                        1981.855263
+Population (historical)    65941.631579
+Name: IMN, dtype: float64)
+('IND', Year                       1.548759e+03
+Population (historical)    4.045618e+08
+Name: IND, dtype: float64)
+('IRL', Year                       1.548759e+03
+Population (historical)    4.265795e+06
+Name: IRL, dtype: float64)
+('IRN', Year                       1.548759e+03
+Population (historical)    2.023402e+07
+Name: IRN, dtype: float64)
+('IRQ', Year                       1.548759e+03
+Population (historical)    6.848295e+06
+Name: IRQ, dtype: float64)
+('ISL', Year                         1548.758621
+Population (historical)    119807.862069
+Name: ISL, dtype: float64)
+('ISR', Year                       1.548759e+03
+Population (historical)    1.595195e+06
+Name: ISR, dtype: float64)
+('ITA', Year                       1.548759e+03
+Population (historical)    3.381473e+07
+Name: ITA, dtype: float64)
+('JAM', Year                       1.803265e+03
+Population (historical)    1.043998e+06
+Name: JAM, dtype: float64)
+('JEY', Year                        1981.855263
+Population (historical)    79562.342105
+Name: JEY, dtype: float64)
+('JOR', Year                       1.548759e+03
+Population (historical)    1.328108e+06
+Name: JOR, dtype: float64)
+('JPN', Year                       1.548759e+03
+Population (historical)    5.883639e+07
+Name: JPN, dtype: float64)
+('KAZ', Year                       1.548759e+03
+Population (historical)    6.295095e+06
+Name: KAZ, dtype: float64)
+('KEN', Year                       1.548759e+03
+Population (historical)    9.024877e+06
+Name: KEN, dtype: float64)
+('KGZ', Year                       1.548759e+03
+Population (historical)    1.755864e+06
+Name: KGZ, dtype: float64)
+('KHM', Year                       1.548759e+03
+Population (historical)    4.227944e+06
+Name: KHM, dtype: float64)
+('KIR', Year                        1911.50000
+Population (historical)    42292.46875
+Name: KIR, dtype: float64)
+('KNA', Year                        1856.785425
+Population (historical)    35497.506073
+Name: KNA, dtype: float64)
+('KOR', Year                       1.548759e+03
+Population (historical)    1.759026e+07
+Name: KOR, dtype: float64)
+('KWT', Year                         1548.758621
+Population (historical)    570183.950192
+Name: KWT, dtype: float64)
+('LAO', Year                       1.548759e+03
+Population (historical)    1.725314e+06
+Name: LAO, dtype: float64)
+('LBN', Year                       1.548759e+03
+Population (historical)    1.380603e+06
+Name: LBN, dtype: float64)
+('LBR', Year                       1.548759e+03
+Population (historical)    1.002335e+06
+Name: LBR, dtype: float64)
+('LBY', Year                       1.548759e+03
+Population (historical)    1.439488e+06
+Name: LBY, dtype: float64)
+('LCA', Year                        1548.758621
+Population (historical)    63912.624521
+Name: LCA, dtype: float64)
+('LIE', Year                        1548.758621
+Population (historical)    13675.229885
+Name: LIE, dtype: float64)
+('LKA', Year                       1.548759e+03
+Population (historical)    6.521333e+06
+Name: LKA, dtype: float64)
+('LSO', Year                         1548.758621
+Population (historical)    593268.000000
+Name: LSO, dtype: float64)
+('LTU', Year                       1.548759e+03
+Population (historical)    1.901065e+06
+Name: LTU, dtype: float64)
+('LUX', Year                         1548.758621
+Population (historical)    245655.367816
+Name: LUX, dtype: float64)
+('LVA', Year                       1.548759e+03
+Population (historical)    1.456958e+06
+Name: LVA, dtype: float64)
+('MAC', Year                         1965.860465
+Population (historical)    330135.534884
+Name: MAC, dtype: float64)
+('MAF', Year                        1981.855263
+Population (historical)    18903.763158
+Name: MAF, dtype: float64)
+('MAR', Year                       1.548759e+03
+Population (historical)    9.050687e+06
+Name: MAR, dtype: float64)
+('MCO', Year                        1911.500000
+Population (historical)    20283.883929
+Name: MCO, dtype: float64)
+('MDA', Year                       1.548759e+03
+Population (historical)    1.802768e+06
+Name: MDA, dtype: float64)
+('MDG', Year                       1.548759e+03
+Population (historical)    5.261519e+06
+Name: MDG, dtype: float64)
+('MDV', Year                         1911.500000
+Population (historical)    114642.763393
+Name: MDV, dtype: float64)
+('MEX', Year                       1.548759e+03
+Population (historical)    2.949514e+07
+Name: MEX, dtype: float64)
+('MHL', Year                        1911.500000
+Population (historical)    29276.366071
+Name: MHL, dtype: float64)
+('MKD', Year                         1548.758621
+Population (historical)    933763.927203
+Name: MKD, dtype: float64)
+('MLI', Year                       1.548759e+03
+Population (historical)    4.317051e+06
+Name: MLI, dtype: float64)
+('MLT', Year                         1671.418605
+Population (historical)    218949.996124
+Name: MLT, dtype: float64)
+('MMR', Year                       1.548759e+03
+Population (historical)    1.495960e+07
+Name: MMR, dtype: float64)
+('MNE', Year                         1911.500000
+Population (historical)    392059.455357
+Name: MNE, dtype: float64)
+('MNG', Year                       1.548759e+03
+Population (historical)    1.003551e+06
+Name: MNG, dtype: float64)
+('MNP', Year                        1981.855263
+Population (historical)    32288.513158
+Name: MNP, dtype: float64)
+('MOZ', Year                       1.548759e+03
+Population (historical)    6.543026e+06
+Name: MOZ, dtype: float64)
+('MRT', Year                         1548.758621
+Population (historical)    840346.731801
+Name: MRT, dtype: float64)
+('MSR', Year                       1860.009091
+Population (historical)    8192.463636
+Name: MSR, dtype: float64)
+('MTQ', Year                         1753.0
+Population (historical)    246674.0
+Name: MTQ, dtype: float64)
+('MUS', Year                         1904.384615
+Population (historical)    502133.799145
+Name: MUS, dtype: float64)
+('MWI', Year                       1.548759e+03
+Population (historical)    3.713961e+06
+Name: MWI, dtype: float64)
+('MYS', Year                       1.548759e+03
+Population (historical)    6.111201e+06
+Name: MYS, dtype: float64)
+('MYT', Year                        1941.01
+Population (historical)    81833.80
+Name: MYT, dtype: float64)
+('NAM', Year                         1548.758621
+Population (historical)    528180.582375
+Name: NAM, dtype: float64)
+('NCL', Year                         1199.214286
+Population (historical)    111401.293651
+Name: NCL, dtype: float64)
+('NER', Year                       1.548759e+03
+Population (historical)    3.578699e+06
+Name: NER, dtype: float64)
+('NGA', Year                       1.548759e+03
+Population (historical)    4.079365e+07
+Name: NGA, dtype: float64)
+('NIC', Year                       1.548759e+03
+Population (historical)    1.394601e+06
+Name: NIC, dtype: float64)
+('NIU', Year                       1986.500000
+Population (historical)    3224.459459
+Name: NIU, dtype: float64)
+('NLD', Year                       1.548759e+03
+Population (historical)    6.850020e+06
+Name: NLD, dtype: float64)
+('NOR', Year                       1.548759e+03
+Population (historical)    2.320295e+06
+Name: NOR, dtype: float64)
+('NPL', Year                       1.548759e+03
+Population (historical)    8.311981e+06
+Name: NPL, dtype: float64)
+('NRU', Year                       1911.500000
+Population (historical)    4095.299107
+Name: NRU, dtype: float64)
+('NZL', Year                       1.893833e+03
+Population (historical)    1.457614e+06
+Name: NZL, dtype: float64)
+('OMN', Year                         1548.758621
+Population (historical)    754325.570881
+Name: OMN, dtype: float64)
+('OWID_AKD', Year                        1937.666667
+Population (historical)    11703.333333
+Name: OWID_AKD, dtype: float64)
+('OWID_CZS', Year                       1.940881e+03
+Population (historical)    1.359304e+07
+Name: OWID_CZS, dtype: float64)
+('OWID_ERE', Year                       1.951375e+03
+Population (historical)    3.186517e+07
+Name: OWID_ERE, dtype: float64)
+('OWID_GDR', Year                           1906.5
+Population (historical)    12840375.0
+Name: OWID_GDR, dtype: float64)
+('OWID_GFR', Year                           1906.5
+Population (historical)    38477500.0
+Name: OWID_GFR, dtype: float64)
+('OWID_KOS', Year                       1.981855e+03
+Population (historical)    1.522525e+06
+Name: OWID_KOS, dtype: float64)
+('OWID_SRM', Year                       1.071982e+03
+Population (historical)    5.505798e+06
+Name: OWID_SRM, dtype: float64)
+('OWID_USS', Year                       1.484655e+03
+Population (historical)    1.114355e+08
+Name: OWID_USS, dtype: float64)
+('OWID_WRL', Year                       1.199214e+03
+Population (historical)    3.280188e+09
+Name: OWID_WRL, dtype: float64)
+('OWID_YAR', Year                       1.965217e+03
+Population (historical)    6.326913e+06
+Name: OWID_YAR, dtype: float64)
+('OWID_YGS', Year                       1.940000e+03
+Population (historical)    1.669473e+07
+Name: OWID_YGS, dtype: float64)
+('OWID_YPR', Year                       1.965217e+03
+Population (historical)    1.845426e+06
+Name: OWID_YPR, dtype: float64)
+('PAK', Year                       1.548759e+03
+Population (historical)    4.512605e+07
+Name: PAK, dtype: float64)
+('PAN', Year                         1548.758621
+Population (historical)    839128.318008
+Name: PAN, dtype: float64)
+('PER', Year                       1.548759e+03
+Population (historical)    7.905770e+06
+Name: PER, dtype: float64)
+('PHL', Year                       1.548759e+03
+Population (historical)    2.118749e+07
+Name: PHL, dtype: float64)
+('PLW', Year                       1911.500000
+Population (historical)    8220.450893
+Name: PLW, dtype: float64)
+('PNG', Year                       1.548759e+03
+Population (historical)    1.858165e+06
+Name: PNG, dtype: float64)
+('POL', Year                       1.548759e+03
+Population (historical)    2.088273e+07
+Name: POL, dtype: float64)
+('PRI', Year                       1.681521e+03
+Population (historical)    2.070445e+06
+Name: PRI, dtype: float64)
+('PRK', Year                       1.548759e+03
+Population (historical)    8.859676e+06
+Name: PRK, dtype: float64)
+('PRT', Year                       1.548759e+03
+Population (historical)    5.659966e+06
+Name: PRT, dtype: float64)
+('PRY', Year                       1.548759e+03
+Population (historical)    1.395381e+06
+Name: PRY, dtype: float64)
+('PSE', Year                         1911.500000
+Population (historical)    990223.598214
+Name: PSE, dtype: float64)
+('PYF', Year                         1973.891566
+Population (historical)    167426.614458
+Name: PYF, dtype: float64)
+('QAT', Year                         1548.758621
+Population (historical)    221850.084291
+Name: QAT, dtype: float64)
+('REU', Year                         1936.643564
+Population (historical)    469888.396040
+Name: REU, dtype: float64)
+('ROU', Year                       1.548759e+03
+Population (historical)    1.168373e+07
+Name: ROU, dtype: float64)
+('RUS', Year                       1.548759e+03
+Population (historical)    7.191619e+07
+Name: RUS, dtype: float64)
+('RWA', Year                       1.548759e+03
+Population (historical)    2.769216e+06
+Name: RWA, dtype: float64)
+('SAU', Year                       1.548759e+03
+Population (historical)    5.041270e+06
+Name: SAU, dtype: float64)
+('SDN', Year                       1.548759e+03
+Population (historical)    9.507876e+06
+Name: SDN, dtype: float64)
+('SEN', Year                       1.548759e+03
+Population (historical)    3.060217e+06
+Name: SEN, dtype: float64)
+('SGP', Year                       1.818357e+03
+Population (historical)    1.068877e+06
+Name: SGP, dtype: float64)
+('SHN', Year                       1971.965116
+Population (historical)    5629.883721
+Name: SHN, dtype: float64)
+('SJM', Year                       1925.252427
+Population (historical)     770.883495
+Name: SJM, dtype: float64)
+('SLB', Year                         1761.670588
+Population (historical)    156616.600000
+Name: SLB, dtype: float64)
+('SLE', Year                       1.548759e+03
+Population (historical)    1.784081e+06
+Name: SLE, dtype: float64)
+('SLV', Year                       1.548759e+03
+Population (historical)    1.784701e+06
+Name: SLV, dtype: float64)
+('SMR', Year                        1911.500000
+Population (historical)    13733.169643
+Name: SMR, dtype: float64)
+('SOM', Year                       1.548759e+03
+Population (historical)    3.008345e+06
+Name: SOM, dtype: float64)
+('SPM', Year                       1871.568807
+Population (historical)    4809.403670
+Name: SPM, dtype: float64)
+('SRB', Year                       1.911500e+03
+Population (historical)    4.157906e+06
+Name: SRB, dtype: float64)
+('SSD', Year                       1.909186e+03
+Population (historical)    2.929518e+06
+Name: SSD, dtype: float64)
+('STP', Year                        1548.758621
+Population (historical)    57573.088123
+Name: STP, dtype: float64)
+('SUR', Year                         1548.758621
+Population (historical)    177568.854406
+Name: SUR, dtype: float64)
+('SVK', Year                       1.548759e+03
+Population (historical)    3.000147e+06
+Name: SVK, dtype: float64)
+('SVN', Year                       1.548759e+03
+Population (historical)    1.021181e+06
+Name: SVN, dtype: float64)
+('SWE', Year                       1.548759e+03
+Population (historical)    5.020218e+06
+Name: SWE, dtype: float64)
+('SWZ', Year                         1548.758621
+Population (historical)    279012.498084
+Name: SWZ, dtype: float64)
+('SXM', Year                        1986.500000
+Population (historical)    20367.824324
+Name: SXM, dtype: float64)
+('SYC', Year                        1911.500000
+Population (historical)    37330.785714
+Name: SYC, dtype: float64)
+('SYR', Year                       1.548759e+03
+Population (historical)    4.694892e+06
+Name: SYR, dtype: float64)
+('TCA', Year                        1910.485714
+Population (historical)    11403.971429
+Name: TCA, dtype: float64)
+('TCD', Year                       1.548759e+03
+Population (historical)    3.184321e+06
+Name: TCD, dtype: float64)
+('TGO', Year                       1.548759e+03
+Population (historical)    1.607837e+06
+Name: TGO, dtype: float64)
+('THA', Year                       1.548759e+03
+Population (historical)    1.855695e+07
+Name: THA, dtype: float64)
+('TJK', Year                       1.548759e+03
+Population (historical)    1.949053e+06
+Name: TJK, dtype: float64)
+('TKL', Year                       1975.873418
+Population (historical)    1713.506329
+Name: TKL, dtype: float64)
+('TKM', Year                       1.548759e+03
+Population (historical)    1.445558e+06
+Name: TKM, dtype: float64)
+('TLS', Year                         1548.758621
+Population (historical)    384925.279693
+Name: TLS, dtype: float64)
+('TON', Year                        1818.357143
+Population (historical)    41363.273810
+Name: TON, dtype: float64)
+('TTO', Year                         1882.752066
+Population (historical)    482879.632231
+Name: TTO, dtype: float64)
+('TUN', Year                       1.548759e+03
+Population (historical)    3.232055e+06
+Name: TUN, dtype: float64)
+('TUR', Year                       1.548759e+03
+Population (historical)    2.303628e+07
+Name: TUR, dtype: float64)
+('TUV', Year                       1911.500000
+Population (historical)    4890.174107
+Name: TUV, dtype: float64)
+('TWN', Year                       1.548759e+03
+Population (historical)    6.902307e+06
+Name: TWN, dtype: float64)
+('TZA', Year                       1.548759e+03
+Population (historical)    1.074198e+07
+Name: TZA, dtype: float64)
+('UGA', Year                       1.548759e+03
+Population (historical)    7.621452e+06
+Name: UGA, dtype: float64)
+('UKR', Year                       1.548759e+03
+Population (historical)    2.520175e+07
+Name: UKR, dtype: float64)
+('URY', Year                       1.548759e+03
+Population (historical)    1.242575e+06
+Name: URY, dtype: float64)
+('USA', Year                       1.548759e+03
+Population (historical)    1.028883e+08
+Name: USA, dtype: float64)
+('UZB', Year                       1.548759e+03
+Population (historical)    7.503716e+06
+Name: UZB, dtype: float64)
+('VAT', Year                       1911.5000
+Population (historical)     850.0625
+Name: VAT, dtype: float64)
+('VCT', Year                        1850.508065
+Population (historical)    53241.479839
+Name: VCT, dtype: float64)
+('VEN', Year                       1.548759e+03
+Population (historical)    6.492130e+06
+Name: VEN, dtype: float64)
+('VGB', Year                        1975.469880
+Population (historical)    16095.638554
+Name: VGB, dtype: float64)
+('VIR', Year                        1847.756757
+Population (historical)    57867.270270
+Name: VIR, dtype: float64)
+('VNM', Year                       1.548759e+03
+Population (historical)    2.409018e+07
+Name: VNM, dtype: float64)
+('VUT', Year                        1829.585657
+Population (historical)    72530.725100
+Name: VUT, dtype: float64)
+('WLF', Year                        1981.855263
+Population (historical)    11318.250000
+Name: WLF, dtype: float64)
+('WSM', Year                        1829.585657
+Population (historical)    76086.513944
+Name: WSM, dtype: float64)
+('YEM', Year                       1.548759e+03
+Population (historical)    6.412740e+06
+Name: YEM, dtype: float64)
+('ZAF', Year                       1.548759e+03
+Population (historical)    1.299509e+07
+Name: ZAF, dtype: float64)
+('ZMB', Year                       1.548759e+03
+Population (historical)    3.261771e+06
+Name: ZMB, dtype: float64)
+('ZWE', Year                       1.548759e+03
+Population (historical)    3.251376e+06
+Name: ZWE, dtype: float64)

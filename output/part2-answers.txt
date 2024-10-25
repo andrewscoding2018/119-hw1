@@ -1,0 +1,18 @@
+q1,bar
+q2a,[46968150.49606728, 57332056.41390496, 60121256.15044189]
+q3,1
+q4a,[0.00022909371182322502, 0.00014579272828996181, 0.0001666019670665264]
+q5a,[1160488326.3982708]
+q5b,[9.619398042559624e-05]
+q6,[-36.68493150684932, 742.4283362326227, 672646.9086750395, 8230.70280100241, 47565.65076236741]
+q7,[600, 6000, 55366, 1]
+q8,['baseline_small', 'baseline_medium', 'baseline_large', 'baseline_latency']
+q9a,Not Implemented
+q9b,Not Implemented
+q11,Not Implemented
+q12,Not Implemented
+q13a,Not Implemented
+q13b,Not Implemented
+extra credit (a),Not Implemented
+extra credit (b),Not Implemented
+PART 2,8
