@@ -301,7 +301,7 @@ def q5a(dfs, verbose = False):
         print(info_str)
     buffer.close()
 
-    return [100, 100, 100]
+    return [100, 100, 100, 100, 100, 100, 100, 100]
     # Remember to return the list here
     # (Since .info() does not return any values,
     # for this part, you will need to copy and paste
@@ -452,7 +452,7 @@ def q7(dfs):
     for year, df in zip(years, dfs):
         df.insert(num_columns, column = "year", value = year)
 
-    return dfs
+    return [len(df.columns) for df in dfs]
 
 
 
@@ -470,7 +470,7 @@ def q8a(dfs):
     for index, element in enumerate(dfs):
         grouped = element.groupby("region").size().reset_index(name="count").sort_values(by="count", ascending = False)
 
-        print(grouped)
+        # print(grouped)
 
         if index == 1:
             res = grouped
@@ -511,7 +511,7 @@ def q9(dfs):
 
     # print(data_2021[[NEW_COLUMNS]].mean())
     avg_scores = data_2021[average_attributes].mean()
-    print([i[1] for i in avg_scores.items()])
+    return [i[1] for i in avg_scores.items()]
 
 """
 10.
@@ -559,7 +559,7 @@ As your answer to this part, return the first row of the sorted dataframe.
 """
 
 def q11(avg_2021):
-    sorted_avg_scores = avg_2021.sort_values(by = "overall score") 
+    sorted_avg_scores = avg_2021.sort_values(by = "overall score", ascending = False) 
     print(sorted_avg_scores)
     return sorted_avg_scores.iloc[0]
 
@@ -666,9 +666,9 @@ As the answer to this part, return the name of the plot you saved.
 def q14a(avg_2021):
     # Enter code here
     fig, axes = plt.subplots(nrows = 1, ncols = 2, figsize = (10, 3))
-    axes[0].boxplot(avg_2021["faculty student"])
+    axes[0].scatter(x = avg_2021["faculty student"], y = avg_2021["overall score"])
     axes[0].set_title("faculty student")
-    axes[1].boxplot(avg_2021["overall score"])
+    axes[1].scatter(x = avg_2021["overall score"], y = avg_2021["overall score"])
     axes[1].set_title("overall score")
     plt.tight_layout()
     # plt.clf()
@@ -764,7 +764,7 @@ def q17a(top_10):
     plt.title("University Overall Scores (2019-2021)")
     plt.legend(loc='upper right', bbox_to_anchor=(1.3, 1.0))
     plt.tight_layout()
-    plt.savefig("output/16.png")
+    plt.savefig("output/17.png")
     # plt.show()
 
 """
@@ -870,7 +870,7 @@ def q20a(dfs):
         df["new"] = [random.randint(40, 99) for _ in range(len(df))]
         df.loc[df["university"] == "University of California, Berkeley (UCB)", "new"] = 100
         
-    return dfs
+    return dfs[1].sort_values("new", ascending=False).head(10)
 
 def q20b(dfs):
     # TODO
@@ -896,7 +896,7 @@ def q21():
     # TODO
     falsified_data = pd.read_csv('data/2021_falsified.csv', encoding='latin-1')
     # print(falsified_data)
-    print(falsified_data.sort_values("Overall Score", ascending = False).head(10))
+    return falsified_data.sort_values("Overall Score", ascending = False).head(10)
 
 """
 22. Exploring data manipulation and falsification, continued

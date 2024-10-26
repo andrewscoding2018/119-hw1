@@ -17,6 +17,7 @@ from collections import defaultdict
 import seaborn as sns
 import pandas as pd
 import matplotlib.pyplot as plt
+import pandasql as ps
 import matplotlib.ticker as mticker
 
 """
@@ -90,6 +91,12 @@ class ThroughputHelper:
             avg_time = total_time / NUM_RUNS
 
             size = self.sizes[i]
+            print("\n\n")
+            print("\n\n")
+            print(size)
+            print(avg_time)
+            print("\n\n")
+            print("\n\n")
             throughput = size / avg_time if avg_time > 0 else float('inf')
             throughputs_avgs.append(throughput)
 
@@ -319,14 +326,16 @@ of the pipeline in part 1.
 # part1.load_input()
 # part1.PART_1_PIPELINE()
 
+part1_dataframes = part1.load_input()
+
 def q5a():
     # Return the throughput of the pipeline in part 1.
     h = ThroughputHelper()
-    h.add_pipeline("pipeline 1", 300, lambda: part1.PART_1_PIPELINE)
+    input_size = sum(len(df) for df in part1_dataframes)
+    h.add_pipeline("pipeline 1",input_size, lambda: part1.PART_1_PIPELINE)
     lat = h.compare_throughput()
 
     return lat
-
 
 def q5b():
     # Return the latency of the pipeline in part 1.
@@ -681,7 +690,7 @@ def q11():
     # for_loop_pipeline() to return the 5 numbers.
     # (these should match the numbers you got in Q6.)
     data = load_input('data/population.csv')
-    return for_loop_pipeline(data)
+    return [float(x[0]) for x in for_loop_pipeline(data).values]
 
 """
 12.
@@ -873,11 +882,32 @@ and generate plots for each of these in the following files:
 
 # Extra credit (optional)
 
+def population_pipeline_clone_data(data):
+    POP_DATA_CLONE = data
+    population_pipeline(POP_DATA_CLONE)
+
 def extra_credit_a():
-    raise NotImplementedError
+    # Generate plot in ouptut/q13a.png
+    # Return list of 6 throughputs
+    h = ThroughputHelper()
+    h.add_pipeline("no copy s", 600, lambda: population_pipeline(POPULATION_SMALL))
+    h.add_pipeline("no copy m", 6000, lambda: population_pipeline(POPULATION_MEDIUM))
+    h.add_pipeline("no copy l", 59178, lambda: population_pipeline(POPULATION_LARGE))
+    h.add_pipeline("copy df s", 600, lambda: population_pipeline_clone_data(POPULATION_SMALL))
+    h.add_pipeline("copy df m", 6000,lambda: population_pipeline_clone_data(POPULATION_MEDIUM))
+    h.add_pipeline("copy df l", 59178, lambda: population_pipeline_clone_data(POPULATION_LARGE))
+    # Add all 6 pipelines for a throughput comparison
+    throughputs = h.compare_throughput()
+    h.generate_plot("output/extra_credit_a.png")
+    return throughputs
 
 def extra_credit_b():
-    raise NotImplementedError
+    h = LatencyHelper()
+    h.add_pipeline("no copy", lambda: add_list(LIST_SINGLE_ITEM))
+    h.add_pipeline("copy dataframe", lambda: add_list(LIST_SINGLE_ITEM))
+    latencies = h.compare_latency()
+    h.generate_plot("output/extra_credit_b.png")
+    return latencies
 
 """
 ===== Wrapping things up =====
